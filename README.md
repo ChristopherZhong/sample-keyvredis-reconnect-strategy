@@ -38,3 +38,4 @@ node index.js
 }
 { message: 'Not emitting the error', error: 'AggregateError' }
 ```
+5. CTRL + C to terminate the `node` process.
