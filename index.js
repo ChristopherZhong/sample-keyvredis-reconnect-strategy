@@ -22,7 +22,8 @@ async function run() {
             reconnectStrategy: reconnectStrategy,
         },
     });
-    configure(keyvRedis);
+    // uncomment to see it using the reconnect strategy
+    // configure(keyvRedis);
     const keyv = new Keyv(keyvRedis);
     // connection to Redis happens at first use
     console.log({ set: await keyv.set("key", "value") });
