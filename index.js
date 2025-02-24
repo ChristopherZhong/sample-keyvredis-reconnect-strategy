@@ -25,8 +25,8 @@ async function run() {
     configure(keyvRedis);
     const keyv = new Keyv(keyvRedis);
     // connection to Redis happens at first use
-    console.log(await keyv.set("key", "value"));
-    console.log(await keyv.get("key"));
+    console.log({ set: await keyv.set("key", "value") });
+    console.log({ get: await keyv.get("key") });
 }
 
 run();
